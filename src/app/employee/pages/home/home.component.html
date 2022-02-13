@@ -1,0 +1,11 @@
+<div class="d-flex flex-row flex-wrap justify-content-center bd-highlight my-3">
+  <app-employee
+    class="p-2"
+    *ngFor="let employee of employees"
+    [employees]="employee"
+    (onDeleteEmpoyee)="reloadEmployees()"
+  ></app-employee>
+</div>
+<div class="alert alert-danger" role="alert" *ngIf="!employees">
+  Aún no hay empleados por listar!
+</div>

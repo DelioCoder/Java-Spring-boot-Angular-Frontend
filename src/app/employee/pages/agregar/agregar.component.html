@@ -1,0 +1,73 @@
+<form [formGroup]="miFormulario" class="container my-4" (ngSubmit)="save()">
+  <div class="mb-2">
+    <label class="form-label">name</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your name..."
+      formControlName="name"
+    />
+  </div>
+
+  <div class="mb-2">
+    <label class="form-label">email</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your email..."
+      formControlName="email"
+    />
+  </div>
+
+  <div class="mb-2">
+    <label class="form-label">jobTitle</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your jobTitle..."
+      formControlName="jobTitle"
+    />
+  </div>
+
+  <div class="mb-2">
+    <label class="form-label">phone</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your phone number..."
+      formControlName="phone"
+    />
+  </div>
+
+  <div class="mb-2">
+    <label class="form-label">imageUrl</label>
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Enter your image's Url..."
+      formControlName="imageUrl"
+    />
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-outline-primary col-md-12 my-4"
+    [disabled]="miFormulario.invalid"
+  >
+    Add
+  </button>
+</form>
+
+<div
+  class="alert alert-success alert-dismissible fade show animate__animated animate__bounce"
+  role="alert"
+  *ngIf="updated"
+>
+  <strong>Actualizado!</strong>.
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>

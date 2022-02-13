@@ -1,0 +1,21 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/240px-Angular_full_color_logo.svg.png"
+        alt="angula"
+        style="height: 50px"
+      />
+    </a>
+    <ul class="nav justify-content-end bg-light">
+      <li
+        *ngFor="let item of templateMenu"
+        [routerLink]="[item.ruta]"
+        style="cursor: pointer"
+        class="nav-item"
+      >
+        <a class="nav-link">{{ item.texto }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
